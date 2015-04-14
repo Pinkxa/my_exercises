@@ -1,0 +1,49 @@
+<hr class="chm" width="100%" size="0" align="center" />
+        <div class="WebHelp_breadcrumps">
+            <div style="font-size: 16px; font-weight: bold; padding-top: 10px;">Feedback</div>
+            <br />
+            <div id="feedback" class="WebHelp_breadcrumps">
+                <div id="error">Please answer all necessary questions.<div id="error_fields"></div></div>
+                <div class="Body_Feedback">
+                    <form action="" method="post">
+                        <input type="hidden" id="SelectedValue" value="" />
+                        <div class="row1">
+                            <div class="coloumn">
+                                <label id="label_helpful">Was the information helpful?</label>
+                                <br />
+                                <input type="radio" name="helpful" value="ja" class="yes" /> Yes
+							<input type="radio" name="helpful" value="nein" class="no" /> No</div>
+                            <div class="coloumn">
+                                <label id="label_quality">How useful was the information?</label>
+                                <br />
+                                <ul class="star-rating">
+                                    <li class="current-rating" id="rating">Currently 0 Stars.</li>
+                                    <li><a href="#" title="1 star out of 4" class="one-star" onclick="rate(1); return false;">1</a>
+                                    </li>
+                                    <li><a href="#" title="2 stars out of 4" class="two-stars" onclick="rate(2); return false;">2</a>
+                                    </li>
+                                    <li><a href="#" title="3 stars out of 4" class="three-stars" onclick="rate(3); return false;">3</a>
+                                    </li>
+                                    <li><a href="#" title="4 stars out of 4" class="four-stars" onclick="rate(4); return false;">4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="coloumn">
+                                <label id="label_feedback">Your message</label>:<br /><textarea name="feedback" id="feedback_text" rows="2" cols="50"></textarea><br /><br /><input type="checkbox" name="feedback_request" value="yes" onclick="showHideUserdata()" />I would like to receive a response to my feedback.<br /><br /><div id="user">
+							Name: <input type="text" size="30" id="name" style="margin-left:5px; margin-bottom:2px;"></input><br /><label id="label_email">E-Mail</label>: <input type="text" size="30" id="email" style="margin-left:3px;"></input></div><div class="row2" align="right"><input type="submit" value="send" class="submit" /></div></div>
+                        </div>
+                        <input type="hidden" value="en" name="lang" id="lang" />
+                    </form>
+                </div>
+                <div class="Body_Feedback_Success"><b>Thank you for your feedback!</b>
+                    <br />				Your feedback helps us to continue to improve our documentation.<br />				We feel it is important to make it as informative and easy-to-understand as possible.<br />				Thank you!<br /></div>
+                <p class="Footer1" style="clear:both">© by Tricentis GmbH</p>
+            </div>
+        </div>
+        <script src="../resources/syntaxhighlight/highlight.pack.js">
+        </script>
+        <script>/* <![CDATA[ */hljs.initHighlightingOnLoad();/* ]]> */</script>
+        <script type="text/javascript" src="https://documentation.tricentis.com/permalink/hideHeader.js">
+        </script>
+    </body>
+</html>

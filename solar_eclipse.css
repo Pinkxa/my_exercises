@@ -1,0 +1,75 @@
+$star-count : 200
+$eclipse-size: 40vh
+
+body
+  background: linear-gradient(#000 0%, rgba(#1b1e33, 10%) 100%)
+  margin: 0
+  height: 100vh
+  
+#sol
+  background: white
+  box-shadow: 0 0 20vh rgba(#faf2d7, 1%), inset 0 0 5vh rgba(#bf9e38, 15%)
+  border-radius: 50%
+  height: $eclipse-size
+  width: $eclipse-size
+  position: fixed
+  top: calc(50% - 20vh)
+  left: calc(50% - 20vh)
+
+#luna
+  background: #000
+  border-radius: 50%
+  box-shadow: 0 0 2vh
+  height: $eclipse-size
+  width: $eclipse-size
+  position: fixed
+  top: calc(50% - 20vh)
+  left: calc(50% - 20vh)
+  animation:
+    name: eclipse
+    duration: 60s
+    direction: alternate
+    iteration-count: infinite
+    timing-function: linear
+    
+.star
+  background: white
+  box-shadow: 0 0 2px 1px blue
+  height: 2px
+  width: 2px
+  position: absolute
+  z-index: -1
+  opacity: .3
+  
+  animation:
+    name: twinkle
+    duration: 20s
+    iteration-count: infinite
+  
+  @for $i from 1 to $star-count+1        
+    $delay: random(20)
+    
+    &:nth-of-type(#{$i})
+      animation-delay: #{$delay}s
+      top: random(99) + vh
+      left: random(99) + vw
+  
+    
+@keyframes eclipse
+  from
+    transform: translateX(-45vh)
+  to
+    transform: translateX(45vh)
+    
+@keyframes twinkle
+  5%
+    opacity: 1
+  15%
+    opacity: .3
+  68%
+    opacity: .3
+  74%
+    opacity: 1
+  78%
+    opacity: .3
+    
